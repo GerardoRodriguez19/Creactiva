@@ -1,0 +1,249 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*, *:before, *:after
+{
+    box-sizing: inherit;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global colors */
+:root
+{
+    --rosa: #fcdde3;
+    --amarillo: #ffcd64;
+    --amarillo_claro: #ffd780;
+    --verde: #c3d996;
+    --azul: #b1dfe4;
+    --morado: #dec7e0;
+    --morado_oscuro: #ba87be;
+    --morado_oscuro_max: #543557;
+}
+
+body
+{
+    background: #fff; color: #333;
+}
+
+header
+{
+    background-color: var(--rosa);
+}
+
+nav
+{
+    padding: 2rem;
+}
+
+ul
+{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4
+{
+    margin: 0;
+    padding: 0;
+}
+
+h2
+{
+    font-family: 'Fredoka';
+    font-size: 3.8rem;
+}
+
+h3
+{
+    font-size: 1.8rem;
+}
+
+p
+{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+a
+{
+    text-decoration: none;
+    margin: 0;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover
+{
+    color: var(--morado_oscuro);
+}
+
+section
+{
+    margin-bottom: 3rem!important;
+}
+
+.abrir-menu,
+.cerrar-menu
+{
+    display: none;
+}
+
+@media (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu
+    {
+        display: block;
+        border: 0;
+        font-size: 3.2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu
+    {
+        color: var(--morado_oscuro_max);
+    }
+
+    .cerrar-menu
+    {
+        color: var(--rosa);
+    }
+
+    nav
+    {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--morado_oscuro_max);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        transition: all .2s ease;
+    }
+
+    nav.visible
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    ul
+    {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    ul li a
+    {
+        color: var(--rosa);
+    }
+}
+
+.section
+{
+    padding-bottom: 1rem;
+}
+
+.section:last-of-type
+{
+    margin: 0!important;
+}
+
+.contenedor
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero
+{
+    background-color: var(--azul);
+    text-align: center;
+    padding: 6rem;
+}
+
+.section h2
+{
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    /* margin-top: 2rem; */
+}
+
+.cards
+{
+    display: flex;
+    column-gap: 3rem;
+    justify-content: space-between;
+}
+
+.card
+{
+    background-color: var(--rosa);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    width: 50rem;
+}
+
+.btn
+{
+    background-color: var(--amarillo);
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover
+{
+    background-color: var(--amarillo_claro);
+}
+
+#paquetes
+{
+    background-color: var(--morado);
+}
+
+.paquetes
+{
+    margin-bottom: 3rem;
+}
+
+.paquetes h2
+{
+    padding-top: 2rem;
+}
+
+footer
+{
+    background-color: var(--verde);
+    text-align: center;
+    padding: 2.5rem;
+}
