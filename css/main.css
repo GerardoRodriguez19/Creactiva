@@ -55,6 +55,11 @@ h1, h2, h3, h4
     padding: 0;
 }
 
+h1
+{
+    padding-left: 1.5rem;
+}
+
 h2
 {
     font-family: 'Fredoka';
@@ -103,7 +108,7 @@ section
     {
         display: block;
         border: 0;
-        font-size: 3.2rem;
+        font-size: 3.5rem;
         background-color: transparent;
         cursor: pointer;
     }
@@ -111,6 +116,7 @@ section
     .abrir-menu
     {
         color: var(--morado_oscuro_max);
+        padding: 1.5rem;
     }
 
     .cerrar-menu
@@ -185,6 +191,14 @@ section
     padding: 6rem;
 }
 
+@media (max-width: 550px)
+{
+    .hero
+    {
+        border-radius: .8rem;
+    }
+}
+
 .section h2
 {
     font-family: 'Nunito', sans-serif;
@@ -208,6 +222,24 @@ section
     width: 50rem;
 }
 
+@media (max-width: 550px) {
+    .cards
+    {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .card
+    {
+        width: 100%;
+    }
+
+    .main
+    {
+        padding: 0 1.5rem;
+    }
+}
+
 .btn
 {
     background-color: var(--amarillo);
@@ -229,16 +261,21 @@ section
 #paquetes
 {
     background-color: var(--morado);
+    padding: 3rem;
 }
 
-.paquetes
+@media (max-width: 550px)
 {
-    margin-bottom: 3rem;
+    #paquetes
+    {
+        border-radius: .8rem;
+    }
 }
 
 .paquetes h2
 {
     padding-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 footer
