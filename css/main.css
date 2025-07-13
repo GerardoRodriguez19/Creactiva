@@ -95,7 +95,7 @@ img
     width: 100%;
     height: auto;
     margin: 2rem 0;
-    object-fit: cover; /* O ajusta a tu gusto */
+    object-fit: contain;
 }
 
 a:hover
@@ -226,10 +226,19 @@ section
     padding: 2rem 1.5rem;
     border-radius: 1rem;
     min-width: 27rem;
-    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
+.card-body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-top: 1rem;
+}
 
 @media (max-width: 768px) {
     .cards
@@ -273,6 +282,7 @@ section
 {
     background-color: var(--morado);
     padding: 1.6rem;
+    margin-bottom: 3.5rem!important;
 }
 
 .paquetes h2
