@@ -109,9 +109,20 @@ section
     margin-bottom: 3rem!important;
 }
 
-#logo:hover
+#logo
 {
-    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    padding-left: 1.6rem;
+}
+
+.logo
+{
+    /* width: 6rem; */
+    /* height: auto; */
 }
 
 .abrir-menu,
@@ -179,9 +190,9 @@ section
     }
 }
 
-.pd-6
+.pd-3
 {
-    padding: 6rem!important;
+    padding: 1.6rem!important;
 }
 
 .section
@@ -211,7 +222,7 @@ section
 {
     background-color: var(--azul);
     text-align: center;
-    padding: 6rem;
+    padding: 1.6rem;
 }
 
 .nosotros
