@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --color-rosa: #fcdde3;
+    --color-crema: #f8efe3;
+    --color-amarillo: #ffcd64;
+    --color-amarillo_claro: #ffd780;
+    --color-verde: #c3d996;
+    --color-verde_oscuro: #8ea06a;
+    --color-azul: #b1dfe4;
+    --color-morado: #dec7e0;
+    --color-morado_oscuro: #ba87be;
+    --color-morado_oscuro_max: #99619E;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-crema);
+}
