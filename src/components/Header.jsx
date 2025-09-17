@@ -19,9 +19,9 @@ const Header = () => {
         {/* Desktop Navbar */}
         <div className="hidden sm:flex items-center">
           <div className="text-lg text-slate-800">
-              <Link to="/blog" className={`mx-4 ${currentPath === '/blog' && 'font-bold'}`}>Blog</Link>
-              <Link to="/talleres" className={`mx-4 ${currentPath === '/talleres' && 'font-bold'}`}>Talleres</Link>
-              <Link to="/nosotros" className={`mx-4 ${currentPath === '/nosotros' && 'font-bold'}`}>Nosotros</Link>
+              <Link to="/blog" className={`mx-4 hover:text-morado_oscuro_max ${currentPath === '/blog' && 'font-bold'}`}>Blog</Link>
+              <Link to="/talleres" className={`mx-4 hover:text-morado_oscuro_max ${currentPath === '/talleres' && 'font-bold'}`}>Talleres</Link>
+              <Link to="/nosotros" className={`mx-4 hover:text-morado_oscuro_max ${currentPath === '/nosotros' && 'font-bold'}`}>Nosotros</Link>
           </div>
           <ButtonLayout label="Iniciar sesión" />
         </div>
@@ -43,9 +43,9 @@ const Header = () => {
         } sm:hidden bg-morado text-slate-700 ml-auto flex-col items-start w-48 px-3 py-2 pb-4 rounded-b-lg space-y-2`}
         >
         <div className="block text-lg font-semibold space-y-2">
-            <Link to="/blog" className={`block ${currentPath === '/blog' && 'font-bold'}`}>Blog</Link>
-            <Link to="/talleres" className={`block ${currentPath === '/talleres' && 'font-bold'}`}>Talleres</Link>
-            <Link to="/nosotros" className={`block ${currentPath === '/nosotros' && 'font-bold'}`}>Nosotros</Link>
+            <Link to="/blog" className={`block hover:text-morado_oscuro ${currentPath === '/blog' && 'font-bold'}`}>Blog</Link>
+            <Link to="/talleres" className={`block hover:text-morado_oscuro ${currentPath === '/talleres' && 'font-bold'}`}>Talleres</Link>
+            <Link to="/nosotros" className={`block hover:text-morado_oscuro ${currentPath === '/nosotros' && 'font-bold'}`}>Nosotros</Link>
         </div>
         <ButtonLayout label="Iniciar sesión" />
       </div>
