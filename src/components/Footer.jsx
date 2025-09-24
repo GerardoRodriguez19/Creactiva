@@ -8,7 +8,7 @@ const Footer = () => {
     // border-2 border-slate-600 para la versión desktop
 
     return (
-        <div className="flex flex-col max-w-7xl mx-4 xl:mx-auto my-4 bg-verde text-gris-oscuro rounded-md">
+        <div className="flex flex-col max-w-[1250px] mx-4 xl:mx-auto my-4 bg-verde text-gris-oscuro rounded-md">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-8 border-b-2 border-verde_oscuro p-6">
                 <div>
                     <h3 className="mb-2 font-bold">Creactiva</h3>
