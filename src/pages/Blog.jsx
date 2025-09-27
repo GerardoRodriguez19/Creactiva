@@ -13,9 +13,11 @@ const Blog = () => {
           <h2 className="text-center text-xl font-bold text-slate-700 mb-4">Te damos la bienvenida a nuestro blog</h2>
           
           <div className="max-w-lg">
-            <Carousel autoSlide={true} autoSlideInterval={2000}>
+            <Carousel autoSlide={true} autoSlideInterval={5000}>
               {slides.map((s) => (
-                <img src={s} />
+                <div key={s} className="w-full">
+                  <img src={s} className="w-full h-full object-cover" />
+                </div>
               ))}
             </Carousel>
           </div>
