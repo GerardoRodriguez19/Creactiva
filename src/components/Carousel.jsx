@@ -20,7 +20,7 @@ const Carousel = ({
     }, [])
 
     return (
-        <div className="overflow-hidden relative">
+        <div className="overflow-hidden relative mb-4">
             <div className="flex transition-transform ease-out duration-500" style={{ transform: `translateX(-${current * 100 }%)`}}>
                 { slides.map((slide, index) => (
                     <div key={index} className="w-full flex-shrink-0">
