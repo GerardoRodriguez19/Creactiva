@@ -8,7 +8,11 @@ const Nosotros = () => {
 
     return (
         <Elements stripe={stripe}>
-            <Pago />
+            <div className="px-4 max-w-md mx-auto">
+                <div className="w-96">
+                    <Pago />
+                </div>
+            </div>
         </Elements>
     )
 }
