@@ -9,7 +9,7 @@ const Nosotros = () => {
     return (
         <Elements stripe={stripe}>
             <div className="px-4 max-w-md mx-auto">
-                <div className="w-96">
+                <div className="">
                     <Pago />
                 </div>
             </div>
