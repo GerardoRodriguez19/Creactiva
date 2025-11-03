@@ -1,5 +1,6 @@
 import { useStripe, useElements, CardNumberElement, CardExpiryElement, CardCvcElement, CardElement } from "@stripe/react-stripe-js"
 import { useState } from "react"
+import axios from 'axios'
 
 const Pago = () => {
 
@@ -15,7 +16,14 @@ const Pago = () => {
         })
 
         if (!error) {
-            console.log(paymentMethod)
+            const { id } = paymentMethod
+
+            const data = await axios.post('http://localhost:5173/api/checkout', {
+                id, 
+                cantidad: 18000 
+            })
+
+            console.log(data)
         }
     }
 
@@ -36,13 +44,15 @@ const Pago = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="mb-4 flex flex-col gap-4 p-4 rounded border border-gray-300">
+            <div className="mb-4 flex flex-col gap-4 p-4 rounded border border-verde">
                 <p className="text-center text-gray-600">Curso #1</p>
                 <img
                     src="img/pedagogia.jpg"
                     alt="Curso 1"
-                    className="max-w-full object-cover"
+                    className="max-w-full object-cover rounded"
                 />
+
+                <h3 className="text-center">Precio: $180</h3>
                 <div className="relative">
                     <div className="
                         p-3 
